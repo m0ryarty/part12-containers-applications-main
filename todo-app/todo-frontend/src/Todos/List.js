@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const TodoList = ({ todos, deleteTodo, completeTodo }) => {
   const onClickDelete = (todo) => () => {
@@ -33,11 +34,12 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
           </>
         )
 
+        
         return (
           <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '70%', margin: 'auto' }}>
-            <span>
+            <Link to= {`/todos/${todo._id}`}>
               {todo.text} 
-            </span>
+            </Link>
             {todo.done ? doneInfo : notDoneInfo}
           </div>
         )

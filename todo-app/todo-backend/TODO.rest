@@ -1,0 +1,29 @@
+GET http://localhost:3000/todos HTTP/1.1
+
+###
+GET http://localhost:3000/todos/6543b3f4c7406adf16231a03 HTTP/1.1
+
+###
+GET http://localhost:3000/todos/statistics
+
+###
+POST http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+
+{
+  "text": "Something to do",
+  "done": false
+}
+
+###
+PUT http://localhost:3000/todos/653d528b15a9995db8445f25 HTTP/1.1
+content-type: application/json
+
+{
+
+  "text": "Something to do",
+  "done": false
+}
+
+###
+DELETE http://localhost:3000/todos/653d0844fbe2a915607500ab HTTP/1.1
