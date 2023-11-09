@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <Routes >
-      <Route path='/' element={ <TodoView className="App" /> }/>
+      <Route path='/' element={<div className='App'><TodoView /></div>}/>
       <Route path='todos/:id' element={<Todo/>}/>      
     </Routes>
   );
