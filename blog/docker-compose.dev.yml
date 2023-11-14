@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  app:
+    image: blog-front-dev
+    build:
+      context: . 
+      dockerfile: frontend/dev.Dockerfile 
+    volumes:      
+      - ./:/usr/src/app
+      - app_data:/usr/src/app
+    environment:
+      - WDS_SOCKET_HOST=127.0.0.1
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true 
+    ports:
+      - 3000:3000
+    container_name: blog-front-dev
+  
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: blog-app-reverse-proxy
+    depends_on:
+      - app
+
+  server: 
+    image: blog-back-dev   
+    build:
+      context: . 
+      dockerfile: backend/dev.Dockerfile
+    volumes:
+      - ./:/usr/src/app
+      - server_data:/usr/src/app
+    ports:
+      - 5000:3000
+    
+
+    
+volumes:
+  app_data:
+  server_data:
+  
+  

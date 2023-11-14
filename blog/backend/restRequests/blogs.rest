@@ -1,0 +1,35 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhcyIsImlkIjoiNjQ0NDdhYjllOGY2ZmMzNGQyNzY1NjI1IiwiaWF0IjoxNjgyMjk2NTM1fQ.7_P82BET7WKONobFVNwC2R5vkOjiVkWW3OWYPSsd9dI
+
+{
+    "title":"Qualquer coisa",
+    "author":"Qualquer um",
+    "url":"http://blog.qualquerlugar.com/qalquercoisa.html",
+    "likes": 12
+}
+
+###
+
+GET http://localhost:3003/api/blogs/ HTTP/1.1
+
+
+###
+
+DELETE http://localhost:3003/api/blogs/645c180ffd3159046af4ae70 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhcyIsImlkIjoiNjQ0NDdhYjllOGY2ZmMzNGQyNzY1NjI1IiwiaWF0IjoxNjgyMjk2NTM1fQ.7_P82BET7WKONobFVNwC2R5vkOjiVkWW3OWYPSsd9dI
+
+###
+
+PUT http://localhost:3003/api/blogs/64473afa8a19c3fae5f88edf HTTP/1.1
+content-type: application/json
+
+{
+    "user": "644494217975fb8642b8fb94"
+}
+
+
+
+
+
+

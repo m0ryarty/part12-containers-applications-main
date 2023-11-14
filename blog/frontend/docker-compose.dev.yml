@@ -1,0 +1,23 @@
+services:
+  app:
+    image: blog-frontend-dev
+    build:
+      context: . 
+      dockerfile: dev.Dockerfile 
+    volumes:      
+      - ./:/usr/src/app
+      - app_data:/usr/src/app
+    environment:
+      - WDS_SOCKET_HOST=127.0.0.1
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true 
+    ports:
+      - 3000:3000
+    container_name: blog-frontend-dev
+  
+  
+
+volumes:
+  app_data:
+  
+  

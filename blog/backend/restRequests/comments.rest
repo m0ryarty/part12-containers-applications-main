@@ -1,0 +1,24 @@
+POST http://localhost:3003/api/blogs/6498d8e8a2d2bd33b85eb8a4/comments HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhcyIsImlkIjoiNjQ0NDdhYjllOGY2ZmMzNGQyNzY1NjI1IiwiaWF0IjoxNjg4MDEwODU2LCJleHAiOjE2ODgwMTQ0NTZ9.MqyruNE9QqNPkSPwFH1gtb87PLPyDVGILa0YTNF7q-Q
+
+{
+    "comment": "Very beautifull"      
+}
+
+###
+
+GET http://localhost:3003/api/blogs/6498d8e8a2d2bd33b85eb8a4/comments HTTP/1.1
+###
+
+GET http://localhost:3003/api/blogs/comments HTTP/1.1
+
+###
+
+POST http://localhost:3003/api/blogs/643b41a43565ee0ad56e9727/comments HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhcyIsImlkIjoiNjQ0NDdhYjllOGY2ZmMzNGQyNzY1NjI1IiwiaWF0IjoxNjgyMjk2NTM1fQ.7_P82BET7WKONobFVNwC2R5vkOjiVkWW3OWYPSsd9dI
+
+{
+    "comment": "Very happy"      
+}
